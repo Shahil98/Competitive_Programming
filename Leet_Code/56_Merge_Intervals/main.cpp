@@ -37,48 +37,6 @@ public:
 
             heapify(arr, new_index, n);
         }
-
-        /*
-        if((index+1)*2 <= n)
-        {
-            if(arr[(index+1)*2 - 1][0] < arr[index][0])
-            {
-                int temp = arr[(index+1)*2 - 1][0];
-                arr[(index+1)*2 - 1][0] = arr[index][0];
-                arr[index][0] = temp;
-
-                temp = arr[(index+1)*2 - 1][1];
-                arr[(index+1)*2 - 1][1] = arr[index][1];
-                arr[index][1] = temp;
-
-                new_index = (index+1)*2 - 1;
-            }
-        }
-
-        if(((index+1)*2 + 1) <= n)
-        {
-            if(arr[(index+1)*2][0] < arr[index][0])
-            {
-                int temp = arr[(index+1)*2][0];
-                arr[(index+1)*2][0] = arr[index][0];
-                arr[index][0] = temp;
-
-                temp = arr[(index+1)*2][1];
-                arr[(index+1)*2][1] = arr[index][1];
-                arr[index][1] = temp;
-
-                new_index = (index+1)*2;
-            }
-        }
-
-
-
-        if(new_index != index)
-        {
-            heapify(arr, new_index, n);
-        }
-
-        */
     }
 
     vector<vector<int>> merge(vector<vector<int>>& intervals)
@@ -91,18 +49,6 @@ public:
         }
 
         int heap_n = int(n/2) - 1;
-
-        /*
-        if(n%2 == 0)
-        {
-            heap_n = n/2-1;
-        }
-        else
-        {
-            heap_n = n/2;
-        }
-        */
-
 
         //Building heap
         for(int i=heap_n; i>=0; i--)
